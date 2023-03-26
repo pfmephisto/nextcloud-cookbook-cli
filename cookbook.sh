@@ -115,7 +115,6 @@ _command_print_list_ingreediance(){
     printf "\n"
     # printf "%-20s\n" "> $ingreedient" #$(_jq $ingreedient '.' )"
   done
-  _ask_user_to_add_ingreediance
 }
 
 
@@ -141,6 +140,7 @@ then
           then
             _command_get_single_recipe $3
             _command_print_list_ingreediance
+            _ask_user_to_add_ingreediance
           fi
         fi
       fi
